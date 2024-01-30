@@ -44,7 +44,7 @@ const getIndex = (row, column) => {
 
 const drawCells = () => {
   const cellsPtr = universe.cells()
-  debugger
+
   const cells = new Uint8Array(memory.buffer, cellsPtr, width * height)
 
   ctx.beginPath()
@@ -68,6 +68,7 @@ const drawCells = () => {
 }
 
 const renderLoop = () => {
+  debugger
   universe.tick()
 
   drawGrid()
